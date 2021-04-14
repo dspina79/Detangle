@@ -13,6 +13,7 @@
 		5585E1D126266C5E009E18DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5585E1CF26266C5E009E18DB /* Main.storyboard */; };
 		5585E1D326266C62009E18DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5585E1D226266C62009E18DB /* Assets.xcassets */; };
 		5585E1D626266C62009E18DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5585E1D426266C62009E18DB /* LaunchScreen.storyboard */; };
+		5585E1DF26269634009E18DB /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5585E1DE26269634009E18DB /* ConnectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5585E1D226266C62009E18DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5585E1D526266C62009E18DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5585E1D726266C62009E18DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5585E1DE26269634009E18DB /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5585E1C926266C5E009E18DB /* AppDelegate.swift */,
 				5585E1CB26266C5E009E18DB /* SceneDelegate.swift */,
 				5585E1CD26266C5E009E18DB /* ViewController.swift */,
+				5585E1DE26269634009E18DB /* ConnectionView.swift */,
 				5585E1CF26266C5E009E18DB /* Main.storyboard */,
 				5585E1D226266C62009E18DB /* Assets.xcassets */,
 				5585E1D426266C62009E18DB /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				5585E1CE26266C5E009E18DB /* ViewController.swift in Sources */,
 				5585E1CA26266C5E009E18DB /* AppDelegate.swift in Sources */,
+				5585E1DF26269634009E18DB /* ConnectionView.swift in Sources */,
 				5585E1CC26266C5E009E18DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
