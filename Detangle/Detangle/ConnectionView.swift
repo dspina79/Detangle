@@ -13,6 +13,8 @@ class ConnectionView: UIView {
     var touchStart = CGPoint.zero
     var after: ConnectionView!
     
+
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         touchStart = touch.location(in: self)

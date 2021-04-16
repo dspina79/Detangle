@@ -11,10 +11,25 @@ class ViewController: UIViewController {
     var currentLevel = 0
     var connections = [ConnectionView]()
     let renderedLines = UIImageView()
+    var scoreLabel = UILabel()
+    
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "SCORE: \(score)"
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        score = 0
+        scoreLabel.textColor = .orange
+        scoreLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(scoreLabel)
+        
         
         renderedLines.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(renderedLines)
@@ -22,7 +37,10 @@ class ViewController: UIViewController {
             renderedLines.topAnchor.constraint(equalTo: view.topAnchor),
             renderedLines.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             renderedLines.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            renderedLines.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            renderedLines.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scoreLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            scoreLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        
         ])
         
         view.backgroundColor = .darkGray
@@ -154,11 +172,13 @@ class ViewController: UIViewController {
             }, completion: { finished in
                 self.view.isUserInteractionEnabled = true
                 self.renderedLines.alpha = 1
+                self.score += (self.currentLevel * 2)
                 self.levelUp()
             })
-            levelUp()
         } else {
-            // level is still ongoing
+
+            score -= 1
+            
         }
     }
 
