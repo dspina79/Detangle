@@ -8,17 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var currentLevel = 0
+    
     var connections = [ConnectionView]()
     let renderedLines = UIImageView()
     var scoreLabel = UILabel()
-    
+    var levelLabel = UILabel()
     var score = 0 {
         didSet {
             scoreLabel.text = "SCORE: \(score)"
         }
     }
     
+    var currentLevel = 0 {
+        didSet {
+            levelLabel.text = "LEVEL: \(currentLevel)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +32,12 @@ class ViewController: UIViewController {
         scoreLabel.textColor = .orange
         scoreLabel.font = UIFont.boldSystemFont(ofSize: 24)
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        levelLabel.textColor = .magenta
+        levelLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        levelLabel.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(scoreLabel)
+        view.addSubview(levelLabel)
         
         
         renderedLines.translatesAutoresizingMaskIntoConstraints = false
@@ -39,7 +48,10 @@ class ViewController: UIViewController {
             renderedLines.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             renderedLines.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scoreLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            scoreLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            scoreLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            levelLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            levelLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            
         
         ])
         
